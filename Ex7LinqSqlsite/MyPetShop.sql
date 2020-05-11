@@ -5,13 +5,13 @@ GO
 CREATE DATABASE MyPetShop
 ON 
 ( NAME = MyPetShop,
-    FILENAME = 'D:\ASPNET\Ex9MyPetShop\MyPetShop.Web\App_Data\MyPetShop.mdf',
+    FILENAME = 'C:\Users\sj171\source\repos\Experiment\Ex7LinqSqlsite\App_Data\MyPetShop.mdf',
     SIZE = 5MB,
     MAXSIZE = 50MB,
     FILEGROWTH = 1MB )
 LOG ON
 ( NAME = MyPetShop_log,
-    FILENAME = 'D:\ASPNET\Ex9MyPetShop\MyPetShop.Web\App_Data\MyPetShop_log.ldf',
+    FILENAME = 'C:\Users\sj171\source\repos\Experiment\Ex7LinqSqlsite\App_Data\MyPetShop_log.ldf',
     SIZE = 3MB,
     MAXSIZE = 25MB,
     FILEGROWTH = 1MB )
@@ -90,16 +90,3 @@ INSERT INTO [Product] VALUES (4, 45.5, 44.2, 1, 'Domestic', 'Domestic', '~/Prod_
 INSERT INTO [Product] VALUES (4, 25.2, 23.5, 1, 'Flowerloving', 'Flowerloving', '~/Prod_Images/Birds/flowerloving.gif', 100)
 INSERT INTO [Product] VALUES (5, 47.7, 45.5, 1, 'Panda', 'Panda', '~/Prod_Images/Endangered/panda.gif', 100)
 INSERT INTO [Product] VALUES (5, 35.5, 33.5, 1, 'Pointy', 'Pointy', '~/Prod_Images/Endangered/pointy.gif', 100)
-GO
-/*创建CategoryInsert存储过程*/
-CREATE PROCEDURE CategoryInsert
-	(
-	@Name varchar(80),
-	@Descn varchar(255)
-	)
-AS
-	INSERT INTO Category(Name,Descn) VALUES (@Name,@Descn);
-	RETURN
-GO
-USE master;
-GO

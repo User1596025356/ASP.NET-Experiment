@@ -10,7 +10,15 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            分类Id：<asp:TextBox ID="txtCategoryId" runat="server" Width="230px">输入分类Id，只用于“修改”和“删除”</asp:TextBox>
         </div>
+        <asp:Button ID="btnQueryAll" runat="server" Text="显示全部" OnClick="btnQueryAll_Click" />
+        <asp:Button ID="btnFuzzy" runat="server" Text="模糊查找" OnClick="btnFuzzy_Click" />
+        <asp:Button ID="btnInsert" runat="server" Text="插入" OnClick="btnInsert_Click" />
+        <asp:Button ID="btnUpdate" runat="server" Text="修改" OnClick="btnUpdate_Click" />
+        <asp:Button ID="btnDelete" runat="server" Text="删除" OnClick="btnDelete_Click" />
+        <asp:GridView ID="gvCategory" runat="server">
+        </asp:GridView>
     </form>
 </body>
 </html>
